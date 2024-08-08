@@ -1,0 +1,6 @@
+body button {
+  transition: all 0.4s ease;
+}
+body button:hover {
+  transform: scale(1.1);
+}

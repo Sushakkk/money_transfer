@@ -1,0 +1,280 @@
+:root{
+	--color_1:green;
+	--color_blue:rgb(50, 19, 230);
+	--color_header: rgb(236, 240, 199);
+	--color_burger: black;
+}
+
+
+
+html,
+body {
+	height: 100%;
+	line-height: 1;
+	background: #fafafa;
+	font-size: 14px;
+	color: #252b42;
+	font-weight: 500;
+	font-family: Montserrat;
+}
+/* ---------------------------------------------------------------------------- */
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	/* display: flex;
+	flex-direction: column; */
+}
+/* ---------------------------------------------------------------------------- */
+._container {
+	max-width: 1046px;
+	padding: 0px 15px;
+	margin: 0px auto;
+	box-sizing: content-box;
+}
+/* ._ibg {
+	position: relative;
+}
+._ibg img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+} */
+/* ---ШАПКА------------------------------------------------------------------------- */
+.header {
+	position: fixed;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 50;
+}
+
+.header::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: var(--color_header);
+	z-index:2;
+
+} 
+
+
+.header__container {
+	position: relative;
+
+	display: flex;
+	min-height: 104px;
+	align-items: center;
+	justify-content: space-between; /* Центрирует содержимое */
+}
+
+.header__logo {
+	font-size: 30px;
+	font-weight: 700;
+	color: inherit;
+	flex: 0 0 60px;
+	/* border-radius: 50%;
+	overflow: hidden; */
+	position: relative;
+	z-index: 3;
+}
+
+.header__logo img {
+	max-width: 100%;
+	display: block;
+}
+
+
+
+
+.header__burger{
+	display: none;
+
+} 
+
+.header__menu {
+	/* margin: 0px 0px 0px 133px; */
+	font-size: 20px;
+}
+
+
+
+.menu {
+	padding: 5px 0;
+}
+.menu__list {
+	display: flex;
+	position: relative;
+	z-index: 2;
+}
+/* .menu__item {
+} */
+
+
+.menu__item:not(:last-child) {
+	margin: 0px 40px 0px 0px;
+}
+
+.menu__link {
+	color: var(--color_blue);
+	font-weight: 600;
+	line-height: calc(24 / 14 * 100%);
+}
+
+
+.menu__link:hover, .menu__link.active{
+	text-decoration: underline;
+}
+
+
+
+
+
+@media (max-width: 767px) {
+	body.lock{
+		overflow: hidden;
+	}
+	.header__container {
+		min-height: 50px;
+	}
+	.header__logo {
+		/* flex: 0 0 40px; для фото */
+		font-size: 20px;
+	}
+	.header__burger{
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		z-index: 3;
+
+	} 
+	.header__burger span{
+		position: absolute;
+		background-color: var(--color_burger);
+		left: 0;
+		width: 100%;
+		height: 2px;
+		top: 9px;	
+		transition: all 0.5s ease 0s;
+		
+	}
+	.header__burger:before,.header__burger:after{
+		content: '';
+		background-color: var(--color_burger);
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		left:0;
+		transition: all 0.5s ease 0s;
+		
+
+	}
+	
+
+	.header__burger:before{
+		top: 0;
+	}
+	.header__burger:after{
+		bottom:0;
+	}
+	.header__burger.active span{
+		transform: scale(0);
+		
+		
+	}
+
+	.header__burger.active:before{
+		transform: rotate(45deg);
+		top: 9px;
+
+	} 
+	.header__burger.active:after{
+		transform: rotate(-45deg);
+		bottom: 9px;
+
+	} 
+
+
+	.header__menu {
+		position:fixed;
+
+		/* выезжание */
+		top: -100%;	
+		left: 0;
+
+
+		width: 100%;
+		height: 30%;
+		background-color: aquamarine;
+		padding: 70px 10px 20px 0px;
+		transition: all 0.5s ease 0s;
+		display: flex;          /* Используем Flexbox */
+		flex-direction: column; /* Располагаем элементы по вертикали */
+		align-items: center;    /* Центрируем по горизонтали */
+		justify-content: center;
+		overflow: auto;
+	
+
+		
+	}
+	.header__menu.active{
+		top: 0;
+	}
+
+	.menu__list {
+		flex-direction: column;
+    	align-items: center;
+		
+		
+	}
+	
+	.menu__item:not(:last-child) {
+		margin: 0px 0px 20px 0px;
+	}
+	
+}
+/* @media (max-width: 479px) {
+	.header__menu {
+		margin: 0px 0px 0px 20px;
+	}
+}
+ */
+
+
+
+/* @media (max-width: 479px) {
+	.menu__link {
+		font-size: 18px;
+	}
+} */
+
+
+/* @media (max-width: 479px) {
+	.header__container {
+		min-height: 70px;
+	}
+} */
+/* @media (max-width: 992px) {
+	.header__menu {
+		margin: 0px 0px 0px 80px;
+	}
+} */
+
+
+
+
+
+/* ---------------------------------------------------- */
+/* 
+для контента  */
+
+/* @media (max-width: 767px) {
+	
+} */

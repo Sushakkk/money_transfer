@@ -1,10 +1,11 @@
 :root{
 	--color_1:green;
 	--color_blue:white;
-	--color_header: rgb(50, 19, 230);
+	--color_header: rgb(29, 14, 113);
 	--color_burger: black;
 	--color_text_button: white;
 	--color_for_logo: rgb(240, 8, 8);
+	--font:  rgb(231, 229, 237);
 
 }
 
@@ -14,7 +15,7 @@ html,
 body {
 	height: 100%;
 	line-height: 1;
-	background: #fafafa;
+	background-color: var(--font);
 	font-size: 14px;
 	color: #252b42;
 	font-weight: 500;
@@ -24,16 +25,12 @@ body {
 .wrapper {
 	min-height: 100%;
 	overflow: hidden;
-	/* display: flex;
-	flex-direction: column; */
+	display: flex;
+	flex-direction: column;
 }
-/* ---------------------------------------------------------------------------- */
-._container {
-	max-width: 1046px;
-	padding: 0px 15px;
-	margin: 0px auto;
-	box-sizing: content-box;
-}
+
+
+/* не знаю что это  */
 /* ._ibg {
 	position: relative;
 }
@@ -45,6 +42,14 @@ body {
 	left: 0;
 	object-fit: cover;
 } */
+/* ---------------------------------------------------------------------------- */
+._container {
+	max-width: 1046px;
+	padding: 0px 15px;
+	margin: 0px auto;
+	box-sizing: content-box;
+}
+
 /* ---ШАПКА------------------------------------------------------------------------- */
 .header {
 	position: fixed;
@@ -63,6 +68,7 @@ body {
 	height: 100%;
 	background-color: var(--color_header);
 	z-index:2;
+	/* border: 1px solid var(--color_blue); */
 
 } 
 
@@ -120,6 +126,9 @@ body {
 }
 
 
+.content {
+	margin-top: 300px;
+}
 
 
 
@@ -304,3 +313,70 @@ body {
 /* @media (max-width: 767px) {
 	
 } */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --------------------Main-------------------------------- */
+
+
+
+
+/* 
+.page {
+	margin-top: 104px;
+}
+.page__main-block {
+}
+.main-block {
+	display: flex;
+}
+.main-block__container {
+}
+._container {
+}
+.main-block__body {
+	padding: 184px 0px 191px 0px;
+	position: relative;
+	z-index: 2;
+	max-width: 400px;
+}
+.main-block__title {
+	font-size: 58px;
+	line-height: 137%;
+	letter-spacing: 0.2px;
+	font-weight: 800;
+}
+
+.main-block__text {
+}
+.main-block__buttons {
+}
+.main-block__button {
+}
+.main-block__button_orange {
+}
+.main-block__button_border {
+}
+
+
+
+ */
+
+
+
+
+/* --------------------footer-------------------------------- */

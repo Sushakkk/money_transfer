@@ -1,15 +1,28 @@
 @charset "UTF-8";
-body button {
+body .application {
   border-radius: 37px;
   padding: 10px 26px;
-  background-color: var(--color_for_logo);
-  color: var(--color_blue);
+  color: #ffffff; /* Белый цвет текста */
   font-weight: 700;
   cursor: pointer;
   text-align: center;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255, 48, 26, 0.7) 25%, var(--color_for_logo) 25%, var(--color_for_logo) 50%, rgba(255, 48, 26, 0.7) 50%, rgba(255, 48, 26, 0.7) 75%, var(--color_for_logo) 75%, var(--color_for_logo)) 0 0;
+  background-size: 50px 50px; /* Размер полосок */
+  animation: stripes 1.5s infinite; /* Анимация полосок */
+  transition: background-color 0.5s, color 0.5s; /* Плавное изменение фона и цвета текста */
+  /* Вы можете добавить дополнительное оформление кнопки здесь */
   transition: all 0.4s ease;
 }
-body button:hover {
+@keyframes stripes {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 50px 50px; /* Размер полосок */
+  }
+}
+body .application:hover {
   transform: scale(1.1);
 }
 body .menu__link {

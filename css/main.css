@@ -1,0 +1,108 @@
+
+
+main {
+   
+    flex: 1 1 auto;
+    background-color: rgb(231, 229, 237);
+    height: 100vh; /* Высота main равна высоте окна */
+}
+
+
+
+.main-body{
+    padding: 184px 0px 191px 0px;
+    position: relative;
+    z-index: 2;
+
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%; /* убедитесь, что контейнер занимает 100% ширины родителя */
+    
+}
+
+.main-content {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    overflow: hidden; /* скрыть переполнение */
+   
+    width: 100%; /* убедитесь, что контейнер занимает 100% ширины родителя */
+    
+    
+    z-index: 2;
+    
+}
+
+.main-content_about {
+    color: var(--orange);
+    background-color: var(--white-orange);
+    padding: 10px 34px;
+    border-radius: 126px;
+    display: inline-block;
+
+    margin-bottom: 22px;
+}
+
+.main-content h1 {
+    font-size: 58px;
+	line-height: 137%;
+	letter-spacing: 0.2px;
+	font-weight: 800;
+}
+
+.main-content p {
+    line-height: 200%;
+    margin-bottom: 77px;
+    color: var(--black);
+}
+.image{
+  display: flex;
+  justify-content: center;
+  padding: 15px 30px;
+}
+.image img{
+    max-width: 100%; /* ограничить ширину изображения контейнером */
+    height: auto; /* поддерживать соотношение сторон */
+    display: block; /* убрать отступы под изображением */
+    /* opacity: 0.1; */
+    box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.5); /* тень, создающая эффект размытия границ */
+    border-radius: 10px; /* добавление округлости к углам, если требуется */
+   
+
+}
+
+
+
+@media (max-width: 992px) {
+    
+    .main-body {
+        flex-wrap: wrap;
+        flex-direction: column; /* делает элементы в колонку (один под другим) */
+        align-items: center; /* центрирует элементы по горизонтали */
+        text-align: center; /* выравнивание текста по центру */
+        padding: 120px 0px 191px 0px;
+    }
+    .image{
+        margin-top: 30px;
+        max-width: 500px
+
+    }
+
+    /* .image img {
+        max-width: 100%;
+        height: 100%;
+    } */
+
+    .main-content p {
+
+        margin-bottom: 40px;
+  
+    }
+
+}

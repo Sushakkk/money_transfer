@@ -1,6 +1,27 @@
+@charset "UTF-8";
 body button {
+  border-radius: 37px;
+  padding: 10px 26px;
+  background-color: var(--color_for_logo);
+  color: var(--color_blue);
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
   transition: all 0.4s ease;
 }
 body button:hover {
   transform: scale(1.1);
+}
+body .menu__link {
+  display: inline-block; /* Обеспечивает работу transform */
+  transition: all 0.4s ease;
+  /* Плавный переход при наведении */
+}
+body .menu__link:hover, body .menu__link.active {
+  text-decoration: underline;
+  transform: scale(1.1);
+  /* Применяем увеличение при наведении */
+}
+body .header__logo span {
+  color: var(--color_for_logo);
 }

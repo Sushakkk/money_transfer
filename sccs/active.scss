@@ -6,12 +6,40 @@
     transition: all 0.4s ease;
 }
 
+
+
+
 body {
     button {
+        border-radius: 37px;
+        padding: 10px 26px;
+        background-color: var(--color_for_logo);
+        
+        color: var(--color_blue);
+        font-weight: 700;
+        cursor: pointer;
+        text-align: center;
+        
+        
         @include hover-for-link;
         &:hover {
             @include hover;
         }
         
     }
+    .menu__link {
+        display: inline-block;  /* Обеспечивает работу transform */
+        @include hover-for-link;  /* Плавный переход при наведении */
+        
+        &:hover, &.active {
+            text-decoration: underline;
+            @include hover;  /* Применяем увеличение при наведении */
+        }
+    }
+    .header__logo{
+        span{
+            color:var(--color_for_logo)
+        }
+    }
+    
 }

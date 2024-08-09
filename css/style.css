@@ -1,7 +1,7 @@
 :root{
 	--color_1:green;
 	--color_blue:white;
-	--color_header: rgb(29, 14, 113);
+	--color_header:  #252b42;
 	--color_burger: black;
 	--color_text_button: white;
 	--color_for_logo: rgb(240, 8, 8);
@@ -17,7 +17,7 @@ body {
 	line-height: 1;
 	background-color: var(--font);
 	font-size: 14px;
-	color: #252b42;
+	color: var(--color_header);
 	font-weight: 500;
 	font-family: Montserrat;
 }
@@ -44,7 +44,7 @@ body {
 } */
 /* ---------------------------------------------------------------------------- */
 ._container {
-	max-width: 1046px;
+	max-width: 1246px;
 	padding: 0px 15px;
 	margin: 0px auto;
 	box-sizing: content-box;
@@ -112,6 +112,7 @@ body {
 	font-size: 20px;
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 

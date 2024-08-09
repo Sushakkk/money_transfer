@@ -2,56 +2,100 @@
     transform: scale(1.1);
 }
 
-@mixin hover-for-link {
-    transition: all 0.4s ease;
+
+
+@mixin buttons{
+
+	min-height: 44px;
+	display: flex;
+	font-weight: 600;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	line-height: 142%;
+	padding: 5px 20px;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+	border-radius: 5px;
 }
 
 
-
-
 body {
-    .application {
-        border-radius: 37px;
-        padding: 10px 26px;
-        
-        color: #ffffff; /* Белый цвет текста */
-        font-weight: 700;
-        cursor: pointer;
-        text-align: center;
+    button{
+        @include buttons;
         overflow: hidden;
-        background: linear-gradient(135deg, rgba(255, 48, 26, 0.7) 25%, var(--color_for_logo) 25%, var(--color_for_logo) 50%, rgba(255, 48, 26, 0.7) 50%, rgba(255, 48, 26, 0.7) 75%, var(--color_for_logo) 75%, var(--color_for_logo)) 0 0;
-        background-size: 50px 50px; /* Размер полосок */
-        animation: stripes 1.5s infinite; /* Анимация полосок */
-        transition: background-color 0.5s, color 0.5s; /* Плавное изменение фона и цвета текста */
-    
-    
 
-        /* Вы можете добавить дополнительное оформление кнопки здесь */
-    
-
-    @keyframes stripes {
-        from {
-            background-position: 0 0;
-        }
-        to {
-            background-position: 50px 50px; /* Размер полосок */
-        }
-    }
-        
-        
-        @include hover-for-link;
         &:hover {
             @include hover;
         }
-         
+
+
+        &.application {
+       
+            background: linear-gradient(135deg, rgba(255, 48, 26, 0.7) 25%, var(--color_for_logo) 25%, var(--color_for_logo) 50%, rgba(255, 48, 26, 0.7) 50%, rgba(255, 48, 26, 0.7) 75%, var(--color_for_logo) 75%, var(--color_for_logo)) 0 0;
+            background-size: 50px 50px; /* Размер полосок */
+            animation: stripes 1.5s infinite; /* Анимация полосок */
         
+        
+    
+            /* Вы можете добавить дополнительное оформление кнопки здесь */
+        
+    
+        @keyframes stripes {
+            from {
+                background-position: 0 0;
+            }
+            to {
+                background-position: 50px 50px; /* Размер полосок */
+            }
+        }
+        
+             
+            
+            
+        }
+
+    }
+
+
+    .a__buttons{
+        @include buttons;
+
+
+        &.main_aplication{
+            background-color: var(--color_for_logo);
+            margin-right: 20px;
+
+            &:hover {
+                @include hover;
+                border: 1px solid var(--color_for_logo);
+                background-color: var(--color_header);
+                color: var(--color_for_logo);
+               
+                
+            }
+           
+            
+        }
+        &.main_about{
+            
+            background-color: var(--color_header);
+            &:hover {
+                @include hover;
+                border: 1px solid var(--color_for_logo);
+                background-color: var(--color_header);
+                color: var(--color_for_logo);
+            }
+        }
+
         
     }
+    
    
       
     .menu__link {
         display: inline-block;  /* Обеспечивает работу transform */
-        @include hover-for-link;  /* Плавный переход при наведении */
+        transition: all 0.4s ease;
         
         &:hover, &.active {
             text-decoration: underline;

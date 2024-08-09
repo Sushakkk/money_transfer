@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- подключаем шрифт -->
+    <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/nullstyle.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/active.css">
@@ -58,51 +59,286 @@
 
 
             <!-- MAIN -->
-        <main>
+        <main class="page">
+            <div class="page__main-block _container">
 
-            
 
-            <div  class="_container">
-                <div class="main-content ">
 
-                    <div class="main-body">
-                        
-                            <div class="desctiption">
-                                
-                            <h1>Italian<br> Cuisine</h1>
-        
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sodales senectus dictum arcu sit tristique donec eget.</p>
-        
-                            <div class="main-content__buttons">
-                                <a href="#">
-                                    Order now
-                                </a>
-        
-                                <a href="#">
-                                    Reservation
-                                </a>
+                <div class="main-content">
+                    <div class="main-block__body">
+                        <h1 class="main-block__title title_main">Finance and Consultancy Solution</h1>
+                        <div class="main-block__text text_main">
+                            We know how large objects will act, but things on a small scale.
+                        </div>
+                        <div class="main-block__buttons ">
+                            <a href="" class="main_aplication a__buttons">Оставить заявку</a>
+                            <a href="" class="main_about a__buttons">О компании</a>
+                        </div>
+                    </div>
+                    <div class="main-block__image ">
+                        <img src="./img/7.jpg" alt="cover">
+                    </div>
+                </div>
+
+
+            </div>
+
+            <!-- <section class="page__services services">
+                <div class="services__container _container">
+                    <div class="services__body">
+                        <div class="services__column">
+                            <div class="services__item item-service">
+                                <div class="item-service__icon"><img src="img/services/01.svg" alt="Environmental Consulting"></div>
+                                <h3 class="item-service__title">Environmental Consulting</h3>
+                                <div class="item-service__text">We focus on ergonomics and meeting you where you work. </div>
                             </div>
                         </div>
-                    
-    
-                    <div class="image">
-                        <img class="_ibg" src="./img/7.jpg" alt="">
+                        <div class="services__column">
+                            <div class="services__item item-service item-service_color">
+                                <div class="item-service__icon"><img src="img/services/02.svg" alt="Finance and consultancy"></div>
+                                <h3 class="item-service__title  ">Finance and consultancy</h3>
+                                <div class="item-service__text">Just type what's on your mind and we'll get you there.</div>
+                            </div>
+                        </div>
+                        <div class="services__column">
+                            <div class="services__item item-service item-service">
+                                <div class="item-service__icon"><img src="img/services/03.svg" alt="Financial Services Consulting"></div>
+                                <h3 class="item-service__title">Financial Services Consulting</h3>
+                                <div class="item-service__text">the quick fox jumps over the lazy dog</div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+            </section> -->
 
+
+            <section class="page__advantages advantages">
+                <div class="advantages__container _container">
+                    <div class="advantages__header header-block">
+                        <h2 class="header-block__title title_for_page light_title ">Designing Better Experience</h2>
+                        <div class="header-block__sub-title text_for_page">
+                            Problems trying to resolve the conflict between the two major realms <br> of Classical physics: Newtonian mechanics
+                        </div>
+                    </div>
+                    <div class="advantages__body">
+                        <div class="advantages__column">
+                            <div class="advantages__item">
+                                <div class="advantages__icon">
+                                    <img src="img/advantages/01.svg" alt="Consumer Products">
+                                </div>
+                                <div class="advantages__value">972 +</div>
+                                <div class="advantages__text">Consumer Products</div>
+                            </div>
+                        </div>
+                        <div class="advantages__column">
+                            <div class="advantages__item">
+                                <div class="advantages__icon">
+                                    <img src="img/advantages/02.svg" alt="Financial Services">
+                                </div>
+                                <div class="advantages__value">181 +</div>
+                                <div class="advantages__text">Financial Services</div>
+                            </div>
+                        </div>
+                        <div class="advantages__column">
+                            <div class="advantages__item">
+                                <div class="advantages__icon">
+                                    <img src="img/advantages/03.svg" alt="Environmental">
+                                </div>
+                                <div class="advantages__value">98%</div>
+                                <div class="advantages__text">Environmental</div>
+                            </div>
+                        </div>
+                        <div class="advantages__column">
+                            <div class="advantages__item">
+                                <div class="advantages__icon">
+                                    <img src="img/advantages/04.svg" alt="Business & Finance">
+                                </div>
+                                <div class="advantages__value">746 +</div>
+                                <div class="advantages__text">Business & Finance</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-    
+            </section>
+
+            <section class="page__getintouch getintouch">
+                <div class="getintouch__container _container">
+                    <div class="getintouch__header header-block">
+                        <h2 class="header-block__title title_for_page ">Get In Touch</h2>
+                        <div class="header-block__sub-title text_for_page ">
+                            Problems trying to resolve the conflict between <br> the two major realms of Classical physics: Newtonian mechanics
+                        </div>
+                    </div>
+                    <div class="getintouch__items">
+                        <div class="getintouch__item item-getintouch">
+                            <div class="item-getintouch__icon">
+                                <img src="img/getintouch/01.svg" alt="getintouch">
+                            </div>
+                            <div class="item-getintouch__emails">
+                                <a href="mailto:georgia.young@example.com" class="item-getintouch__email">georgia.young@example.com</a>
+                                <a href="mailto:georgia.young@ple.com" class="item-getintouch__email">georgia.young@ple.com</a>
+                            </div>
+                            <div class="item-getintouch__label">Get Support</div>
+                            <a href="" class="item-getintouch__button">Submit Request</a>
+                        </div>
+                        <div class="getintouch__item item-getintouch item-getintouch_active">
+                            <div class="item-getintouch__icon">
+                                <img src="img/getintouch/02.svg" alt="getintouch">
+                            </div>
+                            <div class="item-getintouch__emails">
+                                <a href="mailto:georgia.young@example.com" class="item-getintouch__email">georgia.young@example.com</a>
+                                <a href="mailto:georgia.young@ple.com" class="item-getintouch__email">georgia.young@ple.com</a>
+                            </div>
+                            <div class="item-getintouch__label">Get Support</div>
+                            <a href="" class="item-getintouch__button">Submit Request</a>
+                        </div>
+                        <div class="getintouch__item item-getintouch">
+                            <div class="item-getintouch__icon">
+                                <img src="img/getintouch/03.svg" alt="getintouch">
+                            </div>
+                            <div class="item-getintouch__emails">
+                                <a href="mailto:georgia.young@example.com" class="item-getintouch__email">georgia.young@example.com</a>
+                                <a href="mailto:georgia.young@ple.com" class="item-getintouch__email">georgia.young@ple.com</a>
+                            </div>
+                            <div class="item-getintouch__label">Get Support</div>
+                            <a href="" class="item-getintouch__button">Submit Request</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </section>
+
+            <section class="form _container">
+                <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                    <!-- <input type="hidden" name="access_key" value="57586578-4ef8-4215-86d2-44e2823a8b07" />
+                    <input type="hidden" name="access_key" value="165919fd-0508-46b7-b327-f0d2a34b62d5" /> -->
+                    <input type="hidden" name="access_key" value="57586578-4ef8-4215-86d2-44e2823a8b07" />
+                    <input type="hidden" name="cc" value="ksenia.karpova.4@mail.ru,zheskarkarpov@yandex.ru">
+
+
+                    
+                    <input type="hidden" name="from_name" value="Заявка">
+                    <input type="hidden" name="subject" value="Заявка с сайта" />
+                    <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+                    <div class="mb-6">
+                        <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Full Name</label>
+                        <input type="text" name="name" id="name" placeholder="John Doe" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
+                        <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="phone" class="text-sm text-gray-600 dark:text-gray-400">Phone Number</label>
+                        <input type="text" name="phone" id="phone" placeholder="+7(___) ___-__-__" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
+
+                        <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
+                    </div>
+                    <div class="mb-6">
+                        <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
+                            Send Message
+                        </button>
+                    </div>
+                    <p class="text-base text-center text-gray-400" id="result"></p>
+                </form>
+            </section>
+
+
+
+
+
+
+           
 
           
 
         </main>
+        <footer class="footer">
+            <div class="footer__top">
+                <div class="footer__main _container">
+                    <div class="footer__row">
+                        <div class="footer__column">
+                            <div class="footer__label">Company Info</div>
+                            <nav class="footer__menu menu-footer">
+                                <ul class="menu-footer__list">
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Carrier</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">We are hiring</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Blog</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__column">
+                            <div class="footer__label">Legal</div>
+                            <nav class="footer__menu menu-footer">
+                                <ul class="menu-footer__list">
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Carrier</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">We are hiring</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Blog</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__column">
+                            <div class="footer__label">Features</div>
+                            <nav class="footer__menu menu-footer">
+                                <ul class="menu-footer__list">
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Carrier</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">We are hiring</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Blog</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__column">
+                            <div class="footer__label">Resources</div>
+                            <nav class="footer__menu menu-footer">
+                                <ul class="menu-footer__list">
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Carrier</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">We are hiring</a></li>
+                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Blog</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                        <div class="footer__column">
+                            <div class="footer__label">Get In Touch</div>
+                            <div class="footer__contacts contacts-footer">
+                                <a href="tel:4805550103" class="contacts-footer__item contacts-footer__item_phone">(480) 555-0103</a>
+                                <a href="" class="contacts-footer__item contacts-footer__item_map">4517 Washington Ave. Manchester, Kentucky 39495</a>
+                                <a href="mailto:debra.holt@example.com" class="contacts-footer__item contacts-footer__item_email">debra.holt@example.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__container _container">
+                    <div class="footer__copy">Made With Love By Figmaland All Right Reserved </div>
+                    <div class="footer__social social">
+                        <a href="" class="social__item">
+                            <img src="img/footer/social/01.svg" alt="social">
+                        </a>
+                        <a href="" class="social__item">
+                            <img src="img/footer/social/02.svg" alt="social">
+                        </a>
+                        <a href="" class="social__item">
+                            <img src="img/footer/social/03.svg" alt="social">
+                        </a>
+                        <a href="" class="social__item">
+                            <img src="img/footer/social/04.svg" alt="social">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
 
 
-       <footer class="footer">
-        z gjldfk
-       </footer>
+      
 
        </div>
     </div>

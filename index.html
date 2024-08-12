@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- подключаем шрифт -->
     <link href="https://unpkg.com/tailwindcss@^2.0/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="./css/nullstyle.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/active.css">
     <link rel="stylesheet" href="./css/main.css">
+    
     
     
 
@@ -48,7 +50,8 @@
                 </li>
 
             </ul>
-           <button class="application ">Оставить заявку</button>
+            <a class="application button_main " href="#form_container">Оставить заявку</a>
+           <!-- <button class="application ">Оставить заявку</button> -->
             
         </nav>
         
@@ -64,6 +67,7 @@
 
 
 
+               <div class="main-flex">
                 <div class="main-content">
                     <div class="main-block__body">
                         <h1 class="main-block__title title_main">Finance and Consultancy Solution</h1>
@@ -79,37 +83,12 @@
                         <img src="./img/7.jpg" alt="cover">
                     </div>
                 </div>
+               </div>
 
 
             </div>
 
-            <!-- <section class="page__services services">
-                <div class="services__container _container">
-                    <div class="services__body">
-                        <div class="services__column">
-                            <div class="services__item item-service">
-                                <div class="item-service__icon"><img src="img/services/01.svg" alt="Environmental Consulting"></div>
-                                <h3 class="item-service__title">Environmental Consulting</h3>
-                                <div class="item-service__text">We focus on ergonomics and meeting you where you work. </div>
-                            </div>
-                        </div>
-                        <div class="services__column">
-                            <div class="services__item item-service item-service_color">
-                                <div class="item-service__icon"><img src="img/services/02.svg" alt="Finance and consultancy"></div>
-                                <h3 class="item-service__title  ">Finance and consultancy</h3>
-                                <div class="item-service__text">Just type what's on your mind and we'll get you there.</div>
-                            </div>
-                        </div>
-                        <div class="services__column">
-                            <div class="services__item item-service item-service">
-                                <div class="item-service__icon"><img src="img/services/03.svg" alt="Financial Services Consulting"></div>
-                                <h3 class="item-service__title">Financial Services Consulting</h3>
-                                <div class="item-service__text">the quick fox jumps over the lazy dog</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
+            
 
 
             <section class="page__advantages advantages">
@@ -207,50 +186,38 @@
                 </div>
             </section>
 
-            <section class="form _container">
-                <form action="https://api.web3forms.com/submit" method="POST" id="form">
-                    <!-- <input type="hidden" name="access_key" value="57586578-4ef8-4215-86d2-44e2823a8b07" />
-                    <input type="hidden" name="access_key" value="165919fd-0508-46b7-b327-f0d2a34b62d5" /> -->
-                    <input type="hidden" name="access_key" value="57586578-4ef8-4215-86d2-44e2823a8b07" />
-                    <input type="hidden" name="cc" value="ksenia.karpova.4@mail.ru,zheskarkarpov@yandex.ru">
+            
 
 
-                    
-                    <input type="hidden" name="from_name" value="Заявка">
-                    <input type="hidden" name="subject" value="Заявка с сайта" />
-                    <input type="checkbox" name="botcheck" id="" style="display: none;" />
 
-                    <div class="mb-6">
-                        <label for="name" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Full Name</label>
-                        <input type="text" name="name" id="name" placeholder="John Doe" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                    </div>
-                    <div class="mb-6">
-                        <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Email Address</label>
-                        <input type="email" name="email" id="email" placeholder="you@company.com" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                    </div>
-                    <div class="mb-6">
-                        <label for="phone" class="text-sm text-gray-600 dark:text-gray-400">Phone Number</label>
-                        <input type="text" name="phone" id="phone" placeholder="+7(___) ___-__-__" required class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" />
-                    </div>
-                    <div class="mb-6">
-                        <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Your Message</label>
+                    <div id="form_container" class="container_form">
+            <form class="form" method="POST" id="form">
+                <input type="hidden" name="access_key" value="57586578-4ef8-4215-86d2-44e2823a8b07">
+                <input type="hidden" name="from_name" value="Заявка">
+                <input type="hidden" name="subject" value="Заявка с сайта" />
+                <h2 class="title_form">Оставьте заявку</h2>
 
-                        <textarea rows="5" name="message" id="message" placeholder="Your Message" class="w-full px-3 py-2 placeholder-gray-300 border border-gray-300 rounded-md focus:outline-none focus:ring focus:ring-indigo-100 focus:border-indigo-300 dark:bg-gray-700 dark:text-white dark:placeholder-gray-500 dark:border-gray-600 dark:focus:ring-gray-900 dark:focus:border-gray-500" required></textarea>
-                    </div>
-                    <div class="mb-6">
-                        <button type="submit" class="w-full px-3 py-4 text-white bg-indigo-500 rounded-md focus:bg-indigo-600 focus:outline-none">
-                            Send Message
-                        </button>
-                    </div>
-                    <p class="text-base text-center text-gray-400" id="result"></p>
-                </form>
-            </section>
+                <p class="title-message">Мы с вами свяжемся</p>
+
+                <label>
+                    <input type="text" name="name" id="name" placeholder="ФИО" required>
+                </label>
+                <label>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                </label>
+                <label>
+                    <input type="text" name="tel" id="tel" placeholder="Телефон" required>
+                </label>
+
+                <button class="a__buttons main_aplication submit" type="submit">Отправить</button>
+                <div id="result"></div>
+            </form>
+        </div>
 
 
 
 
-
-
+        
            
 
           
@@ -348,6 +315,54 @@
               <script>
               new WOW().init();
               </script> -->
-  
+
+
+
+              <script src="js/inputmask.min.js"></script>
+              <script src="js/just-validate.min.js"></script>
+              <script>
+                const form = document.getElementById('form');
+                const result = document.getElementById('result');
+                
+                form.addEventListener('submit', function(e) {
+                  e.preventDefault();
+                  
+                  const formData = new FormData(form);
+                  const object = Object.fromEntries(formData);
+                  const json = JSON.stringify(object);
+                  result.innerHTML = "Please wait..."
+                
+                    fetch('https://api.web3forms.com/submit', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/json'
+                            },
+                            body: json
+                        })
+                        .then(async (response) => {
+                            let json = await response.json();
+                            if (response.status == 200) {
+                                result.innerHTML = json.message;
+                            } else {
+                                console.log(response);
+                                result.innerHTML = json.message;
+                            }
+                        })
+                        .catch(error => {
+                            console.log(error);
+                            result.innerHTML = "Something went wrong!";
+                        })
+                        .then(function() {
+                            form.reset();
+                            setTimeout(() => {
+                                result.style.display = "none";
+                            }, 3000);
+                        });
+                });
+              </script>
+              
+   
+
 </body>
 </html>

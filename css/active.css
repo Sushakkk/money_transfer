@@ -1,5 +1,8 @@
 @charset "UTF-8";
-body button {
+body .active_link {
+  text-decoration: underline;
+}
+body main a, body header a {
   min-height: 44px;
   display: flex;
   font-weight: 600;
@@ -11,12 +14,13 @@ body button {
   text-align: center;
   transition: all 0.3s ease 0s;
   border-radius: 5px;
+  margin: 10px 0;
   overflow: hidden;
 }
-body button:hover {
+body main a:hover, body header a:hover {
   transform: scale(1.1);
 }
-body button.application {
+body main a.application, body header a.application {
   background: linear-gradient(135deg, rgba(255, 48, 26, 0.7) 25%, var(--color_for_logo) 25%, var(--color_for_logo) 50%, rgba(255, 48, 26, 0.7) 50%, rgba(255, 48, 26, 0.7) 75%, var(--color_for_logo) 75%, var(--color_for_logo)) 0 0;
   background-size: 50px 50px; /* Размер полосок */
   animation: stripes 1.5s infinite; /* Анимация полосок */
@@ -42,6 +46,7 @@ body .a__buttons {
   text-align: center;
   transition: all 0.3s ease 0s;
   border-radius: 5px;
+  margin: 10px 0;
 }
 body .a__buttons.main_aplication {
   background-color: var(--color_for_logo);
@@ -61,6 +66,14 @@ body .a__buttons.main_about:hover {
   border: 1px solid var(--color_for_logo);
   background-color: var(--color_header);
   color: var(--color_for_logo);
+}
+@media (max-width: 479px) {
+  body .a__buttons {
+    flex: 1 1 100%;
+  }
+  body .a__buttons.main_aplication {
+    margin-right: 0px;
+  }
 }
 body .menu__link {
   display: inline-block; /* Обеспечивает работу transform */

@@ -17,7 +17,7 @@
 } */
 .main-content{
 
-    padding: 100px 0px;
+    padding: 100px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -55,6 +55,7 @@
 
 
 
+
 .main-block__image {
     max-width: 50%;
     height: auto;
@@ -64,11 +65,14 @@
 
 
 @media (max-width: 992px) {
+
+	
     .page__main-block{
         margin-top: 50px;
     }
     
     .main-content {
+		padding: 50px 0;
         flex-wrap: wrap;
         flex-direction: column; /* делает элементы в колонку (один под другим) */
         align-items: center; /* центрирует элементы по горизонтали */
@@ -97,9 +101,9 @@
 
 
 @media (max-width: 479px) {
-	.title {
-		font-size: 42px;
-	}
+	/* .title {
+		font-size: 25px;
+	} */
     .main_aplication, .main_about  {
         font-size: 16px;
     }
@@ -327,7 +331,16 @@
 
 
 
+@media (max-width: 992px) {
 
+	.title_main {
+		font-size: 35px;
+	}
+	.main-block__text {
+		margin: 35px 0;
+	}
+
+}
 
 
 

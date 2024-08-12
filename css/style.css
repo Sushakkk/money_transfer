@@ -6,6 +6,7 @@
 	--color_text_button: white;
 	--color_for_logo: rgb(240, 8, 8);
 	--font:  rgb(231, 229, 237);
+	--color_for_text: #737373;
 
 }
 
@@ -381,3 +382,6 @@ body {
 
 
 /* --------------------footer-------------------------------- */
+
+
+

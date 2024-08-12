@@ -17,44 +17,55 @@
 	text-align: center;
 	transition: all 0.3s ease 0s;
 	border-radius: 5px;
+    margin: 10px 0;
 }
 
 
+
+
+
 body {
-    button{
-        @include buttons;
-        overflow: hidden;
-
-        &:hover {
-            @include hover;
-        }
-
-
-        &.application {
-       
-            background: linear-gradient(135deg, rgba(255, 48, 26, 0.7) 25%, var(--color_for_logo) 25%, var(--color_for_logo) 50%, rgba(255, 48, 26, 0.7) 50%, rgba(255, 48, 26, 0.7) 75%, var(--color_for_logo) 75%, var(--color_for_logo)) 0 0;
-            background-size: 50px 50px; /* Размер полосок */
-            animation: stripes 1.5s infinite; /* Анимация полосок */
-        
-        
+    .active_link{
+        text-decoration:underline;
+    }
     
-            /* Вы можете добавить дополнительное оформление кнопки здесь */
-        
+
+    main, header{
+        a{
+            @include buttons;
+            overflow: hidden;
     
-        @keyframes stripes {
-            from {
-                background-position: 0 0;
+            &:hover {
+                @include hover;
             }
-            to {
-                background-position: 50px 50px; /* Размер полосок */
-            }
-        }
-        
-             
+    
+    
+            &.application {
+           
+                background: linear-gradient(135deg, rgba(255, 48, 26, 0.7) 25%, var(--color_for_logo) 25%, var(--color_for_logo) 50%, rgba(255, 48, 26, 0.7) 50%, rgba(255, 48, 26, 0.7) 75%, var(--color_for_logo) 75%, var(--color_for_logo)) 0 0;
+                background-size: 50px 50px; /* Размер полосок */
+                animation: stripes 1.5s infinite; /* Анимация полосок */
             
             
+        
+                /* Вы можете добавить дополнительное оформление кнопки здесь */
+            
+        
+            @keyframes stripes {
+                from {
+                    background-position: 0 0;
+                }
+                to {
+                    background-position: 50px 50px; /* Размер полосок */
+                }
+            }
+            
+                 
+                
+                
+            }
+    
         }
-
     }
 
 
@@ -88,6 +99,22 @@ body {
             }
         }
 
+       
+
+        
+    }
+
+
+    @media (max-width: 479px) {
+        .a__buttons {
+            flex: 1 1 100%;
+
+            &.main_aplication {
+                margin-right: 0px;
+        
+            }
+            
+        }
         
     }
     

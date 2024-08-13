@@ -190,29 +190,32 @@
 
 
 
-                    <div id="form_container" class="container_form">
-            <form class="form" method="POST" id="form">
-                <input type="hidden" name="access_key" value="57586578-4ef8-4215-86d2-44e2823a8b07">
-                <input type="hidden" name="from_name" value="Заявка">
-                <input type="hidden" name="subject" value="Заявка с сайта" />
-                <h2 class="title_form">Оставьте заявку</h2>
+            <div id="form_container" class="container_form">
+                <form class="form" method="POST" id="form">
+                    <input type="hidden" name="access_key" value="57586578-4ef8-4215-86d2-44e2823a8b07">
+                    <input type="hidden" name="from_name" value="Заявка">
+                    <input type="hidden" name="subject" value="Заявка с сайта" />
+                    <h2 class="title_form">Оставьте заявку</h2>
 
-                <p class="title-message">Мы с вами свяжемся</p>
+                    <p class="title-message">Мы с вами свяжемся</p>
 
-                <label>
-                    <input type="text" name="name" id="name" placeholder="ФИО" required>
-                </label>
-                <label>
-                    <input type="email" name="email" id="email" placeholder="Email" required>
-                </label>
-                <label>
-                    <input type="text" name="tel" id="tel" placeholder="Телефон" required>
-                </label>
+                    <label>
+                        <input type="text" name="name" id="name" placeholder="ФИО" required>
+                    </label>
+                    <div id="nameError" class="error"></div>
+                    <label>
+                        <input type="email" name="email" id="email" placeholder="Email" required>
+                    </label>
+                    <div id="emailError" class="error"></div>
+                    <label>
+                        <input type="text" name="tel" id="tel" placeholder="Телефон" required>
+                    </label>
+                    <div id="phoneError" class="error"></div>
 
-                <button class="a__buttons main_aplication submit" type="submit">Отправить</button>
-                <div id="result"></div>
-            </form>
-        </div>
+                    <button class="a__buttons main_aplication submit" type="submit">Отправить</button>
+                    <div id="result"></div>
+                </form>
+            </div>
 
 
 
@@ -315,52 +318,12 @@
               <script>
               new WOW().init();
               </script> -->
+    <script src="js/inputmask.min.js"></script>
+    <script src="js/just-validate.min.js"></script>
+    <script src="./js/form.js"></script>
 
 
 
-              <script src="js/inputmask.min.js"></script>
-              <script src="js/just-validate.min.js"></script>
-              <script>
-                const form = document.getElementById('form');
-                const result = document.getElementById('result');
-                
-                form.addEventListener('submit', function(e) {
-                  e.preventDefault();
-                  
-                  const formData = new FormData(form);
-                  const object = Object.fromEntries(formData);
-                  const json = JSON.stringify(object);
-                  result.innerHTML = "Please wait..."
-                
-                    fetch('https://api.web3forms.com/submit', {
-                            method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/json',
-                                'Accept': 'application/json'
-                            },
-                            body: json
-                        })
-                        .then(async (response) => {
-                            let json = await response.json();
-                            if (response.status == 200) {
-                                result.innerHTML = json.message;
-                            } else {
-                                console.log(response);
-                                result.innerHTML = json.message;
-                            }
-                        })
-                        .catch(error => {
-                            console.log(error);
-                            result.innerHTML = "Something went wrong!";
-                        })
-                        .then(function() {
-                            form.reset();
-                            setTimeout(() => {
-                                result.style.display = "none";
-                            }, 3000);
-                        });
-                });
-              </script>
               
    
 

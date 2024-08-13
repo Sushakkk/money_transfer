@@ -1,8 +1,9 @@
+const form = document.getElementById("form");
+const result = document.getElementById("result");
+
 // Маска для номера телефона
 Inputmask({ mask: "+7 (999) 999-99-99" }).mask(document.getElementById("tel"));
 
-const form = document.getElementById("form");
-const result = document.getElementById("result");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
@@ -23,7 +24,7 @@ form.addEventListener("submit", function (e) {
 
   let hasError = false;
 
-  if (!fio || !fioRegex.test(fio) || fio.length<10) {
+  if (!fio || !fioRegex.test(fio) || fio.length < 10) {
     document.getElementById("nameError").textContent = "Введите корректное ФИО.";
     hasError = true;
   }
@@ -44,40 +45,74 @@ form.addEventListener("submit", function (e) {
   const object = Object.fromEntries(formData);
   const json = JSON.stringify(object);
   result.innerHTML = "Пожалуйста, подождите...";
-  result.classList.add('result-message');
+  result.classList.add("result-message");
 
+  // Первый запрос
   fetch("https://api.web3forms.com/submit", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
     },
-    body: json,
+    body: JSON.stringify({
+      ...object,
+      access_key: "57586578-4ef8-4215-86d2-44e2823a8b07", // Замените на первый ключ
+    }),
   })
     .then(async (response) => {
       let json = await response.json();
       if (response.status === 200) {
         result.innerHTML = "Сообщение отправлено успешно!";
-        result.classList.add('success');
-        result.classList.remove('error');
+        result.classList.add("success");
+        result.classList.remove("error");
       } else {
         result.innerHTML = json.message;
-        result.classList.add('error');
-        result.classList.remove('success');
+        result.classList.add("error");
+        result.classList.remove("success");
       }
     })
     .catch((error) => {
       console.log(error);
       result.innerHTML = "Что-то пошло не так!";
-      result.classList.add('error');
-      result.classList.remove('success');
+      result.classList.add("error");
+      result.classList.remove("success");
     })
-    .then(function () {
+    .then(() => {
+      // Второй запрос
+      return fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...object,
+          access_key: "6b3fb78f-1b41-4656-abe8-65c5c43acfc2", // Замените на второй ключ
+        }),
+      });
+    })
+    .then(async (response) => {
+      let json = await response.json();
+      if (response.status === 200) {
+        result.innerHTML = "Сообщение отправлено на второй email успешно!";
+        result.classList.add("success");
+        result.classList.remove("error");
+      } else {
+        result.innerHTML = json.message;
+        result.classList.add("error");
+        result.classList.remove("success");
+      }
+    })
+    .catch((error) => {
+      console.log(error);
+      result.innerHTML = "Что-то пошло не так с отправкой на второй email!";
+      result.classList.add("error");
+      result.classList.remove("success");
+    })
+    .finally(() => {
       form.reset();
       setTimeout(() => {
         result.style.display = "none";
       }, 3000);
     });
 });
-
-

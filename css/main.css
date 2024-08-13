@@ -7,6 +7,8 @@
     /* height: 100vh; */
     /* height: calc(100vh-50px); */
     margin-top: 104px;
+	min-height: 100vh;
+	height: auto;
     /* margin-bottom: 50px; */
 
 }
@@ -91,14 +93,28 @@
         margin-left: 0px;
         margin-right: 0px;
         margin-top: 60px;
-        max-width: 500px;
+
     }
 
     
 }
 
 
+@media (max-width: 660px) {
 
+	.main-block__text {
+		margin:30px 0;
+	}
+	.main-block__buttons {
+		margin: 10px 0;
+	}
+	.main-block__image{
+        margin-top: 30px;
+
+    }
+
+
+}
 
 @media (max-width: 479px) {
 	/* .title {
@@ -218,6 +234,11 @@
 .advantages {
 	padding: 80px 0;
     background-color: var(--color_header);
+	height: auto;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 @media (max-width: 992px) {
 	.advantages {
@@ -230,6 +251,7 @@
 	}
 }
 .advantages__container {
+	width: 100%;
 }
 .advantages__header {
 	margin: 0px 0px 50px 0px;
@@ -371,7 +393,12 @@
 
 /* ---------------Контакты-------------------- */
 .getintouch {
+	height: auto;
+	min-height: 100vh;
 	padding: 80px 0px 135px 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .getintouch__container {
 }

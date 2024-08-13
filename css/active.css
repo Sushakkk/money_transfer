@@ -15,6 +15,7 @@ body main a, body header a {
   transition: all 0.3s ease 0s;
   border-radius: 5px;
   margin: 10px 0;
+  flex-wrap: nowrap;
   overflow: hidden;
 }
 body main a:hover, body header a:hover {
@@ -47,6 +48,7 @@ body .a__buttons {
   transition: all 0.3s ease 0s;
   border-radius: 5px;
   margin: 10px 0;
+  flex-wrap: nowrap;
 }
 body .a__buttons.main_aplication {
   background-color: var(--color_for_logo);

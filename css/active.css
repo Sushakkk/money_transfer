@@ -18,8 +18,10 @@ body main a, body header a {
   flex-wrap: nowrap;
   overflow: hidden;
 }
-body main a:hover, body header a:hover {
-  transform: scale(1.1);
+@media (hover: hover) {
+  body main a:hover, body header a:hover {
+    transform: scale(1.1);
+  }
 }
 body main a.application, body header a.application {
   background: linear-gradient(135deg, rgba(255, 48, 26, 0.7) 25%, var(--color_for_logo) 25%, var(--color_for_logo) 50%, rgba(255, 48, 26, 0.7) 50%, rgba(255, 48, 26, 0.7) 75%, var(--color_for_logo) 75%, var(--color_for_logo)) 0 0;
@@ -54,20 +56,24 @@ body .a__buttons.main_aplication {
   background-color: var(--color_for_logo);
   margin-right: 20px;
 }
-body .a__buttons.main_aplication:hover {
-  transform: scale(1.1);
-  border: 1px solid var(--color_for_logo);
-  background-color: var(--color_header);
-  color: var(--color_for_logo);
+@media (hover: hover) {
+  body .a__buttons.main_aplication:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--color_for_logo);
+    background-color: var(--color_header);
+    color: var(--color_for_logo);
+  }
 }
 body .a__buttons.main_about {
   background-color: var(--color_header);
 }
-body .a__buttons.main_about:hover {
-  transform: scale(1.1);
-  border: 1px solid var(--color_for_logo);
-  background-color: var(--color_header);
-  color: var(--color_for_logo);
+@media (hover: hover) {
+  body .a__buttons.main_about:hover {
+    transform: scale(1.1);
+    border: 1px solid var(--color_for_logo);
+    background-color: var(--color_header);
+    color: var(--color_for_logo);
+  }
 }
 @media (max-width: 479px) {
   body .a__buttons {
@@ -80,11 +86,14 @@ body .a__buttons.main_about:hover {
 body .menu__link {
   display: inline-block; /* Обеспечивает работу transform */
   transition: all 0.4s ease;
+  flex-wrap: nowrap;
 }
-body .menu__link:hover, body .menu__link.active {
-  text-decoration: underline;
-  transform: scale(1.1);
-  /* Применяем увеличение при наведении */
+@media (hover: hover) {
+  body .menu__link:hover, body .menu__link.active {
+    text-decoration: underline;
+    transform: scale(1.1);
+    /* Применяем увеличение при наведении */
+  }
 }
 body .header__logo span {
   color: var(--color_for_logo);

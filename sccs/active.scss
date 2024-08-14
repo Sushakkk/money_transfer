@@ -35,10 +35,16 @@ body {
         a{
             @include buttons;
             overflow: hidden;
-    
-            &:hover {
-                @include hover;
+            
+            @media (hover:hover){
+                &:hover {
+                    @include hover;
+                }
+
             }
+
+    
+           
     
     
             &.application {
@@ -78,14 +84,20 @@ body {
             background-color: var(--color_for_logo);
             margin-right: 20px;
 
-            &:hover {
-                @include hover;
-                border: 1px solid var(--color_for_logo);
-                background-color: var(--color_header);
-                color: var(--color_for_logo);
+
+            @media (hover:hover){
                
+                &:hover {
+                    @include hover;
+                    border: 1px solid var(--color_for_logo);
+                    background-color: var(--color_header);
+                    color: var(--color_for_logo);
                 
+                    
+                }
+
             }
+
            
             
         }
@@ -93,12 +105,15 @@ body {
             
             background-color: var(--color_header);
 
+            
+            @media (hover:hover){
             &:hover {
                 @include hover;
                 border: 1px solid var(--color_for_logo);
                 background-color: var(--color_header);
                 color: var(--color_for_logo);
             }
+        }
         }
 
        
@@ -126,10 +141,12 @@ body {
         display: inline-block;  /* Обеспечивает работу transform */
         transition: all 0.4s ease;
         flex-wrap: nowrap;
+        @media (hover:hover){
         &:hover, &.active {
             text-decoration: underline;
             @include hover;  /* Применяем увеличение при наведении */
         }
+    }
     }
     .header__logo{
         span{

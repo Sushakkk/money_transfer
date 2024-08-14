@@ -98,7 +98,7 @@ input, textarea, select, button {
   gap: 8px;
   margin-top: 15px;
 }
-.form label input{
+.form label input, textarea{
 
   color: var(--color_header);
   border: 1px solid var(--color_header);
@@ -109,7 +109,7 @@ input, textarea, select, button {
   width: 100%;
   margin-bottom: 15px;
 }
-input::placeholder {
+input::placeholder, textarea::placeholder {
   color:var(--color_header);
   font-size: 0.9rem;
 }

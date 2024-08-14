@@ -143,7 +143,7 @@
             <section id="contacts" class="page__getintouch getintouch">
                 <div class="getintouch__container _container">
                     <div class="getintouch__header header-block">
-                        <h2 class="header-block__title title_for_page ">Get In Touch</h2>
+                        <h2 class="header-block__title title_for_page ">Наши контакты</h2>
                         <div class="header-block__sub-title text_for_page ">
                             Problems trying to resolve the conflict between <br> the two major realms of Classical physics: Newtonian mechanics
                         </div>
@@ -154,33 +154,33 @@
                                 <img src="img/getintouch/01.svg" alt="getintouch">
                             </div>
                             <div class="item-getintouch__emails">
-                                <a href="mailto:georgia.young@example.com" class="item-getintouch__email">georgia.young@example.com</a>
-                                <a href="mailto:georgia.young@ple.com" class="item-getintouch__email">georgia.young@ple.com</a>
+                                <p class="item-getintouch__email">Телефон</p>
+                                <p class="item-getintouch__email">+7 (977) 420-18-95</p>
                             </div>
-                            <div class="item-getintouch__label">Get Support</div>
-                            <a href="" class="item-getintouch__button">Submit Request</a>
+                            <!-- <div class="item-getintouch__label">Get Support</div> -->
+                            <a href="tel:+79774201895" class="item-getintouch__button">Позвонить</a>
                         </div>
                         <div class="getintouch__item item-getintouch item-getintouch_active">
                             <div class="item-getintouch__icon">
-                                <img src="img/getintouch/02.svg" alt="getintouch">
+                                <img src="img/getintouch/email.svg" alt="getintouch">
                             </div>
                             <div class="item-getintouch__emails">
-                                <a href="mailto:georgia.young@example.com" class="item-getintouch__email">georgia.young@example.com</a>
-                                <a href="mailto:georgia.young@ple.com" class="item-getintouch__email">georgia.young@ple.com</a>
+                                <p class="item-getintouch__email">Почта</p>
+                                <p  class="item-getintouch__email">ksenia.karpova.4@mail.ru</p>
                             </div>
-                            <div class="item-getintouch__label">Get Support</div>
-                            <a href="" class="item-getintouch__button">Submit Request</a>
+                            <!-- <div class="item-getintouch__label">Get Support</div> -->
+                            <a href="mailto:ksenia.karpova.4@mail.ru" class="item-getintouch__button">Написать</a>
                         </div>
                         <div class="getintouch__item item-getintouch">
                             <div class="item-getintouch__icon">
                                 <img src="img/getintouch/03.svg" alt="getintouch">
                             </div>
                             <div class="item-getintouch__emails">
-                                <a href="mailto:georgia.young@example.com" class="item-getintouch__email">georgia.young@example.com</a>
-                                <a href="mailto:georgia.young@ple.com" class="item-getintouch__email">georgia.young@ple.com</a>
+                                <p class="item-getintouch__email">Telegram</p>
+                                <p class="item-getintouch__email">@sushakkk</p>
                             </div>
-                            <div class="item-getintouch__label">Get Support</div>
-                            <a href="" class="item-getintouch__button">Submit Request</a>
+                            <!-- <div class="item-getintouch__label">Get Support</div> -->
+                            <a href="https://t.me/sushakk" target="_blank" rel="noopener noreferrer" class="item-getintouch__button">Написать</a>
                         </div>
                     </div>
                 </div>
@@ -211,6 +211,9 @@
                         <input type="text" name="tel" id="tel" placeholder="Телефон" required>
                     </label>
                     <div id="phoneError" class="error"></div>
+                    <label>
+                    <textarea rows="5" name="message" id="message" placeholder="Комментарий"  ></textarea>
+                    </label>
 
                     <button class="a__buttons main_aplication submit" type="submit">Отправить</button>
                     <div id="result"></div>
@@ -230,52 +233,31 @@
             <div class="footer__top">
                 <div class="footer__main _container">
                     <div class="footer__row">
-                        <div class="footer__column">
-                            <div class="footer__label">Company Info</div>
+        
+                        <div class="header__logo footer_logo">Перевод в <span>Китай</span></div>
                             <nav class="footer__menu menu-footer">
+                               
+
                                 <ul class="menu-footer__list">
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a></li>
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Carrier</a></li>
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">We are hiring</a></li>
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Blog</a></li>
+                                    <li class="menu-footer__item">
+                                        <a href="#main" class="menu-footer__link">Главная</a>
+                                    </li>
+                                    <li class="menu-footer__item">
+                                        <a href="#about" class="menu-footer__link">О компании</a>
+                                    </li>
+                                    <li class="menu-footer__item">
+                                        <a href="#services" class="menu-footer__link">Услуги</a>
+                                    </li>
+                                    <li class="menu-footer__item">
+                                        <a href="#contacts" class="menu-footer__link">Контакты</a>
+                                    </li>
+                    
                                 </ul>
                             </nav>
-                        </div>
+                        
+                        
                         <div class="footer__column">
-                            <div class="footer__label">Legal</div>
-                            <nav class="footer__menu menu-footer">
-                                <ul class="menu-footer__list">
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a></li>
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Carrier</a></li>
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">We are hiring</a></li>
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Blog</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="footer__column">
-                            <div class="footer__label">Features</div>
-                            <nav class="footer__menu menu-footer">
-                                <ul class="menu-footer__list">
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a></li>
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Carrier</a></li>
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">We are hiring</a></li>
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Blog</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="footer__column">
-                            <div class="footer__label">Resources</div>
-                            <nav class="footer__menu menu-footer">
-                                <ul class="menu-footer__list">
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">About Us</a></li>
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Carrier</a></li>
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">We are hiring</a></li>
-                                    <li class="menu-footer__item"><a href="" class="menu-footer__link">Blog</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="footer__column">
-                            <div class="footer__label">Get In Touch</div>
+
                             <div class="footer__contacts contacts-footer">
                                 <a href="tel:4805550103" class="contacts-footer__item contacts-footer__item_phone">(480) 555-0103</a>
                                 <a href="" class="contacts-footer__item contacts-footer__item_map">4517 Washington Ave. Manchester, Kentucky 39495</a>
@@ -283,12 +265,13 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                 </div>
             </div>
             <div class="footer__bottom">
                 <div class="footer__container _container">
-                    <div class="footer__copy">Made With Love By Figmaland All Right Reserved </div>
-                    <div class="footer__social social">
+                    <div class="t420__text t-descr t-descr_xxs" field="text">© 2024 - Transfer</div>
+                    <!-- <div class="footer__social social">
                         <a href="" class="social__item">
                             <img src="img/footer/social/01.svg" alt="social">
                         </a>
@@ -301,7 +284,7 @@
                         <a href="" class="social__item">
                             <img src="img/footer/social/04.svg" alt="social">
                         </a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </footer>

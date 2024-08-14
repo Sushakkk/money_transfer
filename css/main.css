@@ -410,7 +410,9 @@
 }
 
 .getintouch__item {
-	flex: 0 1 33.333%;
+    flex: 1 1 33.333%; /* Элементы занимают по 33.333% ширины */
+	min-width: 300px; /* Установите минимальную ширину */
+   
 }
 .item-getintouch {
 	display: flex;
@@ -419,6 +421,7 @@
 	align-items: center;
 	background-color: #fff;
 	padding: 50px 15px;
+	
 }
 .item-getintouch_active {
 	background: var(--color_header);
@@ -446,10 +449,10 @@
 	font-weight: 600;
 	line-height: 150%;
 	font-size: 16px;
+	margin: 10px 0;
+
 }
-.item-getintouch__email:hover {
-	text-decoration: underline;
-}
+
 .item-getintouch__label {
 	font-weight: 700;
 	font-size: 16px;
@@ -505,10 +508,12 @@
 
 /* -----------------Подвал-----------------Footer----------------- */
 
-.footer {
+.footer_logo {
+	font-size: 16px;
+	margin: 0 20px;
 }
 .footer__top {
-	background: var(--color_header);
+	background: var(--color_footer);
 	padding: 35px 0;
 }
 .footer__main {
@@ -517,10 +522,12 @@
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0px -15px;
+	justify-content: space-between;
 }
 .footer__column {
-	padding: 15px 15px;
+	padding: 0 15px;
 	flex: 0 1 16.6667%;
+	display: flex;
 }
 .footer__column:last-child {
 	flex: 0 1 33.334%;
@@ -546,21 +553,38 @@
 	line-height: 150%;
 	margin: 0px 0px 20px 0px;
 }
-.footer__menu {
-}
+/* .footer__menu {
+	display: flex;
+	padding: 15px 15px;
+	justify-content: space-between;
+	align-items: center;
+	
+} */
 
 .menu-footer {
 }
 .menu-footer__list {
+	display: flex;
+    justify-content: space-between; /* Распределяет элементы по всей доступной ширине с равными промежутками */
+   
+}
+
+
+.menu-footer__item{
+	flex: 1; /* Позволяет элементам растягиваться и сжиматься равномерно */
+    text-align: center; /* Центрирует текст внутри элементов */
+    padding: 10px; /* Добавляем отступы для улучшения внешнего вида */
 }
 .menu-footer__item:not(:last-child) {
 	margin: 0px 0px 10px 0px;
 }
 .menu-footer__link {
+	white-space: nowrap;
 	color: #fff;
 	display: inline-block;
 	line-height: 171%;
 	letter-spacing: 0.2px;
+	
 }
 .menu-footer__link:hover {
 	text-decoration: underline;
@@ -597,7 +621,12 @@
 	background: url("../img/footer/icons/03.svg") 0 0 no-repeat;
 }
 .footer__bottom {
+	background-color: #141623;;
 	padding: 25px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
 }
 .footer__container {
 	display: flex;

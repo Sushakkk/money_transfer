@@ -92,6 +92,7 @@ body {
         &.main_about{
             
             background-color: var(--color_header);
+
             &:hover {
                 @include hover;
                 border: 1px solid var(--color_for_logo);
@@ -124,7 +125,7 @@ body {
     .menu__link {
         display: inline-block;  /* Обеспечивает работу transform */
         transition: all 0.4s ease;
-        
+        flex-wrap: nowrap;
         &:hover, &.active {
             text-decoration: underline;
             @include hover;  /* Применяем увеличение при наведении */

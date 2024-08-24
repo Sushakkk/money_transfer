@@ -450,6 +450,8 @@
 	line-height: 150%;
 	font-size: 16px;
 	margin: 10px 0;
+	visibility: visible; /* Убедитесь, что элемент видим */
+    opacity: 1; /* Убедитесь, что непрозрачность установлена на 1 */
 
 }
 

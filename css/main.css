@@ -453,6 +453,9 @@
 
 
 }
+.item-getintouch__email span{
+	color: inherit;
+}
 
 .item-getintouch__label {
 	font-weight: 700;
@@ -473,10 +476,18 @@
 	transition: all 0.3s ease 0s;
 	border-radius: 5px;
 }
+
+
+
+/*! добавила запрос, не сохраняла в git */
+
+@media (hover:hover){
+
 .item-getintouch__button:hover {
 	border: 1px solid var(--color_for_logo);
 	background-color: var(--color_for_logo);
 	color: #fff;
+}
 }
 
 @media (min-width: 992px) {

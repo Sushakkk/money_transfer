@@ -26,6 +26,21 @@ body {
 	font-family: Montserrat;
 	
 }
+
+
+/* !скрол */
+@media (min-width: 992px) {
+	html,
+body {
+	
+	scroll-padding-top: 220px; 
+
+}
+
+
+
+}
+
 /* ---------------------------------------------------------------------------- */
 .wrapper {
 	min-height: 100%;

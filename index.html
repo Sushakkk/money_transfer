@@ -37,20 +37,20 @@
         <nav class="header__menu menu ">
             <ul class="menu__list">
                 <li class="menu__item">
-                    <a href="#main" class="menu__link">Главная</a>
+                    <a id="MainLink" href="#main" class="menu__link">Главная</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#about" class="menu__link">О компании</a>
+                    <a id="AboutLink" href="#about" class="menu__link">О компании</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#services" class="menu__link">Услуги</a>
+                    <a id="ServicesLink" href="#services" class="menu__link">Услуги</a>
                 </li>
                 <li class="menu__item">
-                    <a href="#contacts" class="menu__link">Контакты</a>
+                    <a id="ContactsLink" href="#contacts" class="menu__link">Контакты</a>
                 </li>
 
             </ul>
-            <a class="application button_main " href="#form_container">Оставить заявку</a>
+            <a id="ApplicationLink" class="application button_main " href="#form_container">Оставить заявку</a>
            <!-- <button class="application ">Оставить заявку</button> -->
             
         </nav>
@@ -64,10 +64,6 @@
             <!-- MAIN -->
         <main id="main" class="page">
             <div  class="page__main-block _container">
-
-
-
-               <div class="main-flex">
                 <div  class="main-content">
                     <div class="main-block__body">
                         <h1 class="main-block__title title_main">Переводы в Китай и логистические услуги</h1>
@@ -75,14 +71,13 @@
                             Подбираем быстрые и легальные маршруты участникам ВЭД для работы с китайскими поставщиками.
                         </div>
                         <div class="main-block__buttons ">
-                            <a href="#form_container" class="main_aplication a__buttons">Оставить заявку</a>
-                            <a href="#about" class="main_about a__buttons">О компании</a>
+                            <a id="ApplicationLink_Main" href="#form_container" class="main_aplication a__buttons">Оставить заявку</a>
+                            <a id="AboutLink_Main" href="#about" class="main_about a__buttons">О компании</a>
                         </div>
                     </div>
                     <div class="main-block__image ">
                         <img src="./img/7.jpg" alt="cover">
                     </div>
-                </div>
                </div>
 
 
@@ -206,15 +201,15 @@
                     <label>
                         <input type="text" name="name" id="name" placeholder="ФИО" required>
                     </label>
-                    <div id="nameError" class="error"></div>
+                    <!-- <div id="nameError" class="error"></div> -->
                     <label>
                         <input type="email" name="email" id="email" placeholder="Email" required>
                     </label>
-                    <div id="emailError" class="error"></div>
+                    <!-- <div id="emailError" class="error"></div> -->
                     <label>
                         <input type="text" name="tel" id="tel" placeholder="Телефон" required>
                     </label>
-                    <div id="phoneError" class="error"></div>
+                    <!-- <div id="phoneError" class="error"></div> -->
                     <label>
                     <textarea rows="5" name="message" id="message" placeholder="Комментарий"  ></textarea>
                     </label>
@@ -307,7 +302,8 @@
               </script> -->
     <script src="js/inputmask.min.js"></script>
     <script src="js/just-validate.min.js"></script>
-    <script src="./js/form.js"></script>
+    <!-- <script src="./js/form.js"></script> -->
+    <script src="./js/validation.js"></script>
 
 
 

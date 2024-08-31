@@ -100,7 +100,7 @@ input, textarea, select, button {
   color: green;
 }
 .error{
-  color: red ;
+  color: rgb(184, 17, 17);
   margin-bottom: 10px;
 }
 
@@ -127,4 +127,10 @@ input::placeholder, textarea::placeholder {
 .submit {
   
   width: 100%;
+}
+
+
+#result {
+  text-align: center;
+  /* Другие стили для #result, если нужно */
 }

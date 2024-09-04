@@ -259,12 +259,14 @@
 	font-weight: 700;
 	font-size: 40px;
     color: var(--color_header);
+	margin: 0px 0px 20px 0px;
 }
 
 .text_for_page{
     line-height: 142%;
     font-size: 20px;
 	color: #737373;
+	/* margin: 10px 0px 10px 0px; */
 }
 
 .light_title {
@@ -272,9 +274,9 @@
 }
 
 
-.header-block__title:not(:last-child) {
+/* .header-block__title:not(:last-child) {
 	margin: 0px 0px 10px 0px;
-}
+} */
 
 
 @media (max-width: 992px) {

@@ -151,7 +151,7 @@
 /* ----------------Достижения------Карточки---------- */
 
 
-.advantages {
+.advantages, .payments {
 	padding: 180px 0;
     background-color: var(--color_header);
 	height: auto;
@@ -172,7 +172,11 @@
 }
 .advantages__container {
 	width: 100%;
+
 }
+
+
+
 .advantages__header {
 	margin: 0px 0px 50px 0px;
 }
@@ -258,8 +262,10 @@
     line-height: 142%;
 	font-weight: 700;
 	font-size: 40px;
+	text-align: center;
     color: var(--color_header);
 	margin: 0px 0px 20px 0px;
+
 }
 
 .text_for_page{
@@ -288,15 +294,12 @@
 		margin: 35px 0;
 	}
 
-}
-
-@media (max-width: 992px) {
-	.header-block__title {
+	.title_for_page {
 		font-size: 35px;
 	}
 }
 @media (max-width: 767px) {
-	.header-block__title {
+	.title_for_page {
 		font-size: 30px;
 	}
 }
@@ -587,5 +590,73 @@
 	.footer__copy {
 		margin: 0px 0px 15px 0px;
 		text-align: center;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ /* ex---------------------------------------payments-------------------------------------------------- */
+
+ .payments {
+    background-color: var(--color_header);
+    transition: left ease 1s;
+    position: relative;
+    left: 0%;
+}
+
+
+.payments__container{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.payments__title {
+	margin-bottom: 50px;
+
+
+}
+
+.payments__image {
+    display: none;
+	width: 80%;
+}
+
+.payments__image.mobile {
+    display: block;
+    object-fit: contain;
+    max-height: 500px;
+}
+
+
+
+
+@media (min-width: 600px) {
+    .payments__wrapper {
+        padding-top: 145px;
+    }
+	/* .payments__title {
+		
+		margin-bottom: 50px;
+	} */
+
+	
+	
+	.payments__image {
+		display: block;
+	}
+
+
+
+	.payments__image.mobile {
+		display: none;
 	}
 }
